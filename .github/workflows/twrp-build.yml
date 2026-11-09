@@ -22,6 +22,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout da Device Tree (Repositorio Atual)
+        uses: actions/checkout@v4
+        with:
+          path: device_tree
+
       - name: Liberar espaco em disco no Runner (Mais de 80 GB livres)
         uses: jlumbroso/free-disk-space@main
         with:
@@ -61,11 +66,12 @@ jobs:
           mkdir -p ~/OrangeFox_sync && cd ~/OrangeFox_sync
           bash ~/scripts/orangefox_sync.sh --branch 12.1 --path ~/twrp
 
-      - name: Clonar Device Tree (Motorola Signature - vantage)
+      - name: Copiar Device Tree para a Fonte (Motorola Signature - vantage)
         run: |
           mkdir -p ~/twrp/device/motorola/vantage
-          cp -r $GITHUB_WORKSPACE/* ~/twrp/device/motorola/vantage/
+          cp -r $GITHUB_WORKSPACE/device_tree/* ~/twrp/device/motorola/vantage/
           chmod +x ~/twrp/device/motorola/vantage/recovery/root/system/bin/hw/*
+          ls -la ~/twrp/device/motorola/vantage/
 
       - name: Compilar Recovery Image (recovery.img)
         run: |

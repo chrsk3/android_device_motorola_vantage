@@ -65,3 +65,4 @@ TW_USE_NEW_MINADBD := true
 # Permitir build de recovery Header v4 sem kernel embutido
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 ALLOW_MISSING_DEPENDENCIES := true
+TARGET_PREBUILT_KERNEL := device/motorola/vantage/PrebuiltKernel
