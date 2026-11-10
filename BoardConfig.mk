@@ -86,3 +86,5 @@ AB_OTA_PARTITIONS := \
     vendor_dlkm \
     system_dlkm \
     odm
+
+BUILD_BROKEN_ELF_PREBUILT_IN_PRODUCT_COPY_FILES := true
