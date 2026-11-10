@@ -9,6 +9,11 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti.recovery \
     android.hardware.fastboot-service.example_recovery \
     android.hardware.health-service.qti_recovery \
+    android.hardware.boot-V1-ndk.so \
+    android.hardware.fastboot-V1-ndk.so \
+    android.hardware.health-V4-ndk.so \
+    libboot_control_client.so \
+    libboot_control_qti.so \
     bm_adsp_ulog.ko \
     goodix_brl_thp.ko \
     mmi_annotate.ko \
