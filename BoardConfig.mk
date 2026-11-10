@@ -69,3 +69,20 @@ TARGET_PREBUILT_KERNEL := device/motorola/vantage/PrebuiltKernel
 
 # Correção de Vendor para AOSP 12.1
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Partições incluídas nas atualizações A/B OTA
+AB_OTA_PARTITIONS := \
+    boot \
+    init_boot \
+    vendor_boot \
+    dtbo \
+    recovery \
+    vbmeta \
+    vbmeta_system \
+    system \
+    system_ext \
+    product \
+    vendor \
+    vendor_dlkm \
+    system_dlkm \
+    odm
