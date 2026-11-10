@@ -66,3 +66,6 @@ TW_USE_NEW_MINADBD := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 ALLOW_MISSING_DEPENDENCIES := true
 TARGET_PREBUILT_KERNEL := device/motorola/vantage/PrebuiltKernel
+
+# Correção de Vendor para AOSP 12.1
+TARGET_COPY_OUT_VENDOR := vendor
