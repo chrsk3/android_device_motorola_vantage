@@ -70,7 +70,7 @@ jobs:
         run: |
           mkdir -p ~/twrp/device/motorola/vantage
           cp -r $GITHUB_WORKSPACE/device_tree/* ~/twrp/device/motorola/vantage/
-          chmod +x ~/twrp/device/motorola/vantage/recovery/root/system/bin/hw/*
+          chmod +x ~/twrp/device/motorola/vantage/prebuilts/bin/hw/*
           ls -la ~/twrp/device/motorola/vantage/
 
       - name: Compilar Recovery Image (recovery.img)
