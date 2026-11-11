@@ -88,3 +88,10 @@ AB_OTA_PARTITIONS := \
     odm
 
 BUILD_BROKEN_ELF_PREBUILT_IN_PRODUCT_COPY_FILES := true
+
+# Configuração de Boot Header v4 para arquitetura GKI / Android 17
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_BOOTIMG_HEADER_VERSION := 4
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_MKBOOTIMG_ARGS += --header_version 4 --pagesize 4096
+TARGET_OTA_ASSERT_DEVICE := vantage,vantage_g
